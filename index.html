@@ -10,13 +10,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
+
 </head>
 
 <body>
 
-    <div class="row">
-        <div class="col-md-4 bg-light text-center p-3 m-0">
+    <div class="jumbotron border-bottom-2 border-info rounded-0">
+        <h1 class="display-3 text-center">Giphy Image Generator</h1>
+        <hr class="my-2">
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-3 bg-light text-center p-3 m-0">
             <br>
             <div class="row form-group" id="searchContainer">
                 <label for="exampleInputEmail1">Search</label>
@@ -31,7 +38,7 @@
             <div class="row bg-light text-center p-3 m-0" id="buttonContainer">
             </div>
         </div>
-        <div class="col-md-8 bg-secondary d-flex justify-content-around align-content-between flex-wrap" id="gifContainer">
+        <div class="col-md-9 bg-secondary d-flex justify-content-around align-content-between flex-wrap" id="gifContainer">
         </div>
     </div>
 

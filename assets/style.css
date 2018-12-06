@@ -8,3 +8,12 @@
     
     margin: 20px;
 }
+
+.jumbotron {
+    font-family: 'Cinzel', serif;
+    background-image: url(./milky-way-2750627_1920.jpg);
+    background-size: cover;
+    color: azure;
+    margin-bottom: 0;
+}
+
