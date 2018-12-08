@@ -1,5 +1,5 @@
 //Array for topics that will create buttons
-let topics = ["Batman", "Superman", "Wonder Woman", "Joker", "Red Hood", "Scarecrow"]
+let topics = ["Batman", "Superman", "Wonder Woman", "Joker", "Red Hood", "The Scarecrow"]
 let gifArray = [];
 
 
@@ -10,6 +10,9 @@ let gifArray = [];
 
 //For loop that will make a button for every term in the array
 function makeButtons() {
+    
+    $("#searchTerm").val("");
+    $("#buttonContainer").empty();
     for (i = 0; i < topics.length; i++) {
         $("#buttonContainer").append("<button data=\"" + topics[i] + "\"class=\"btn btn-primary btn-lg btn-block apiButton\">" + topics[i] + "</button>");
     }
@@ -21,16 +24,15 @@ makeButtons();
 $("#sidebar").on("click", "#submit", function () {
 
     topics.push($("#searchTerm").val());
-    $("#buttonContainer").empty();
     makeButtons();
 });
 
 
 
 //click event for buttons to run the ajax call
-$(".apiButton").on("click", function () {
+$("#buttonContainer").on("click", "button", function () {
 
-
+    console.log($(this));
     $("#gifContainer").empty();
     var host = "https://api.giphy.com/"
     var path = "v1/gifs/search?&"
@@ -83,12 +85,10 @@ $("#gifContainer").on("click", "img", function() {
   
 if ($(this).attr("src") == $(this).attr("still")) {
     $(this).attr("src", $(this).attr("animate"));
-    console.log($(this).attr("src"))
     return;
 }
 if ($(this).attr("src") == $(this).attr("animate")) {
     $(this).attr("src", $(this).attr("still"));
-    console.log($(this).attr("src"));
     return;
     }
 
