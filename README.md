@@ -10,10 +10,9 @@ Click a button on the sidebar to generate images. Then click the images to toggl
 
 None!
 
-```
-Give examples
-```
+## Deployment
 
+site is published at https://variable56.github.io/GIPHY/
 
 ## Acknowledgments
 
